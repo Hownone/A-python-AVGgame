@@ -20,6 +20,8 @@
  # Display in game
  ![image](https://github.com/Hownone/A-python-AVGgame/blob/main/Display/3.png)
  ![image](https://github.com/Hownone/A-python-AVGgame/blob/main/Display/6.png)
+ # Set Up
+  just run the main.py in pycharm or other IDEL
  
  
  
