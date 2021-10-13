@@ -18,6 +18,7 @@
  游戏大部分玩法已实现，但依然可以添加一些小功能和想法，带pass的模块是有想法但还没有完全实现的，有兴趣的玩家可以自己DIY，在已有的父类基础上，完善子类模块，创造更丰富的游戏世界。
  
  # Display in game
+ ![image](https://github.com/Hownone/A-python-AVGgame/blob/main/Display/3.png)
  
  
  
