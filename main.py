@@ -8,21 +8,21 @@ from scenes import *
 
 
 def draw():
-    # »æÖÆº¯Êı
-    # ×°ÊÎÎïµÄ»æÖÆ
+    # ç»˜åˆ¶å‡½æ•°
+    # è£…é¥°ç‰©çš„ç»˜åˆ¶
     if scene.decorations and not scene.over:
         for dec in scene.decorations:
             screen.blit(dec.decoration, (dec.x, dec.y))
-    # ÊµÌåµÄ»æÖÆ
+    # å®ä½“çš„ç»˜åˆ¶
     for i in range(len(scene.objects)):
         scene.objects[i].act.draw()
-    # kidµÄ»æÖÆ
+    # kidçš„ç»˜åˆ¶
     if scene.kid and scene.kid.visible:
         scene.kid.act.draw()
-    # ËÀÍöºÚÄ»
+    # æ­»äº¡é»‘å¹•
     if scene.blackcurtain:
         screen.blit('blackcurtain', (0,0))
-    # ÎÄ±¾¿òµÄ»æÖÆ
+    # æ–‡æœ¬æ¡†çš„ç»˜åˆ¶
     if scene.texts:
         for text in scene.texts:
             screen.draw.text(text.text,center=text.center, align=text.align, fontname=text.fontname,
@@ -32,17 +32,17 @@ def draw():
 
 def update():
     global scene, i
-    # ÖØ¸´²¥·Åbgm
+    # é‡å¤æ’­æ”¾bgm
     if not music.is_playing('bgm'):
         music.play('bgm')
         music.set_volume(0.7)
-    # ¸üĞÂ³¡¾°
+    # æ›´æ–°åœºæ™¯
     scene.update()
-    # ´¦ÀíĞèÒª°´jµÄµÈ´ıÊÂ¼ş
+    # å¤„ç†éœ€è¦æŒ‰jçš„ç­‰å¾…äº‹ä»¶
     if scene.waiting_j:
         if keyboard.j:
             scene.over = True
-    # ´¦ÀíÇĞ»»³¡¾°ÊÂ¼ş
+    # å¤„ç†åˆ‡æ¢åœºæ™¯äº‹ä»¶
     if scene.over:
         if i == len(scenes) - 1:
             exit()
@@ -56,7 +56,7 @@ def update():
             if scene.need_press_j:
                 clock.schedule_unique(scene.set_j,1)
 
-i = 0  # ³¡¾°ĞòºÅ
-scene = scenes[i]  # ÌáÈ¡³¡¾°
+i = 0  # åœºæ™¯åºå·
+scene = scenes[i]  # æå–åœºæ™¯
 scene.load()
-pgzrun.go()  # pycharm»·¾³ÏÂĞèÒªµ÷ÓÃpgzrun.go()Æô¶¯³ÌĞò
+pgzrun.go()  # pycharmç¯å¢ƒä¸‹éœ€è¦è°ƒç”¨pgzrun.go()å¯åŠ¨ç¨‹åº
